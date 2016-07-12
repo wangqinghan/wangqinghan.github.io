@@ -79,10 +79,10 @@ title: Blogging Like a Hacker
 
 例如，在文章里引用其他资源文件，比如下面这张图片（名称为**“jekyll-blog.png”**，让我放到了网站源代码**“images”**目录下）：
 
-![使用Jekyll和Bootstrap，创建一个静态网站]({{ site.url }}/images/jekyll-blog.png)
+![使用Jekyll和Bootstrap，创建一个静态网站](/images/jekyll-blog.png)
 
 我就可以通过以下形式引用到博客里面：
 
 {% highlight text %}
-![使用Jekyll和Bootstrap，创建一个静态网站]({% raw %}{{ site.url }}{% endraw %}/images/jekyll-blog.png)
+![使用Jekyll和Bootstrap，创建一个静态网站](/images/jekyll-blog.png)
 {% endhighlight %}
