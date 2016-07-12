@@ -1,0 +1,35 @@
+<!-- start bottom footer -->
+<footer class="main-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="widget">
+          <h4 class="title">最新文章</h4>
+          <div class="content recent-post">
+            {% for post in site.posts %}
+            {% if forloop.index <=2 %}
+            <div class="recent-single-post">
+              <a class="post-title" href="{{post.url | prepend: site.baseurl | replace: '//', '/'}}">{{post.title}}</a>
+              <div class="date">{{post.date | date_to_string}}</div>
+            </div>
+            {% endif %}
+            {% if forloop.index > 2 %}
+            {% break %}
+            {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="widget">
+          <h4 class="title">标签云</h4>
+          <div class="content tag-cloud">
+            {% for tag in site.tags %}
+            <a href="{{site.baseurl}}tags#{{tag[0]}}">{{tag[0]}}</a>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer><!-- main-footer -->

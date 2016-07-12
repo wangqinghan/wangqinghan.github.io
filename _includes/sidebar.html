@@ -1,0 +1,12 @@
+<aside class="col-md-4 sidebar">
+    <!-- start tag cloud widget -->
+    <div class="widget">
+        <h4 class="title">标签云</h4>
+        <div class="content tag-cloud">
+            {% for tag in site.tags %}
+                <a href="{{site.baseurl}}tags#{{tag[0]}}">{{tag[0]}} <span class="badge">{{tag[1].size}}</span></a>
+            {% endfor %}
+        </div>
+    </div>
+
+</aside><!-- sidebar -->

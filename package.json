@@ -1,0 +1,32 @@
+{
+  "name": "wongjohn.github.io",
+  "version": "1.0.0",
+  "description": "Wang John's Homepage",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wongjohn/wongjohn.github.io.git"
+  },
+  "author": "Wang John",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wongjohn/wongjohn.github.io/issues"
+  },
+  "homepage": "https://github.com/wongjohn/wongjohn.github.io#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "font-awesome": "^4.6.1",
+    "gulp": "^3.9.1",
+    "jquery": "^2.2.4"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.12.8",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-shell": "^0.5.2",
+    "lodash": "^4.12.0"
+  }
+}

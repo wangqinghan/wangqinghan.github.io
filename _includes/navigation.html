@@ -1,0 +1,23 @@
+<!-- start navigation -->
+<nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header">
+                        <span class="nav-toggle-button collapsed" data-toggle="collapse" data-target="#main-menu">
+                            <span class="sr-only">Toggle navigation</span>
+                            <i class="fa fa-bars"></i>
+                        </span>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        <li class="{% if page.url == '/' %}nav-current{% endif %}" role="presentation"><a href="/">首页</a></li>
+                        <li class="{% if page.url == '/tags/' %}nav-current{% endif %}" role="presentation"><a href="/tags/">标签</a></li>
+                        <li class="{% if page.url == '/tech-radar/' %}nav-current{% endif %}" role="presentation"><a href="/tech-radar/">技术雷达</a></li>
+                        <li class="{% if page.url == '/about/' %}nav-current{% endif %}" role="presentation"><a href="/about/">关于</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav><!-- end navigation -->

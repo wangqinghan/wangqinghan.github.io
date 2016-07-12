@@ -1,0 +1,49 @@
+---
+layout: default
+---
+{% for post in paginator.posts  %}
+<article class="post {% if post.featured %} feature {% endif %}">
+    {% if post.featured %}
+    <div class="featured" title="推荐文章">
+        <i class="fa fa-star"></i>
+    </div>
+    {% endif %}
+
+    <div class="post-head">
+        <h1 class="post-title">
+            <a href="{{post.url | prepend: site.baseurl | replace: '//', '/'}}">{{post.title}}</a>
+        </h1><!-- post-title -->
+
+        <div class="post-meta">
+            <span class="author">作者: <a href="/about">{{post.author}}</a></span> &bull;
+            <time class="post-date" datetime="{{post.date | date_to_string}}" title="{{post.date | date_to_string}}">{{post.date | date_to_string}}</time>
+        </div><!-- post-meta -->
+    </div><!-- post-head -->
+
+    {% if post.mediaImage %}
+    <div class="featured-media">
+        <a href="{{post.url | prepend: site.baseurl | replace: '//', '/'}}">
+            <img src="{{post.mediaImage | prepend: site.baseurl | replace: '//', '/'}}" alt="{{post.title}}"/>
+        </a>
+    </div><!-- featured-media -->
+    {% endif %}
+
+    <div class="post-content">
+        <p>{{post.excerpt}}</p>
+    </div><!-- post-content -->
+
+    <div class="post-permalink">
+        <a class="btn btn-default" href="{{post.url | prepend: site.baseurl | replace: '//', '/'}}">阅读全文</a>
+    </div><!-- post-permalink -->
+</article><!-- post -->
+{% endfor %}
+
+<nav class="pagination" role="navigation">
+    {% if paginator.previous_page %}
+    <a href="{{paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/'}}" class="newer-posts"><i class="fa fa-angle-left"></i></a>
+    {% endif %}
+    <span class="page-number">第 {{paginator.page}} 页 &frasl; 共 {{paginator.total_pages}} 页</span>
+    {% if paginator.next_page %}
+    <a href="{{paginator.next_page_path | prepend: site.baseurl | replace: '//', '/'}}" class="older-posts"><i class="fa fa-angle-right"></i></a>
+    {% endif %}
+</nav>
