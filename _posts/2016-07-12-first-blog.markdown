@@ -25,7 +25,7 @@ excerpt:  博客摘要
 
 **加粗**
 
-``斜体``
+``边框样式``
 
 ![图片](/images/header-bg.jpg)
 
